@@ -6,51 +6,44 @@
   <title>Fitness Tracker</title>
   <link rel="icon" href="img/rock.jpg">
 
-  <link rel="stylesheet" href="css/style.css">
-
+  <link href="css/style.css" rel="stylesheet" >
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 </head>
 
 <body>
   <header>
-    <a id="menu-toggle" href="#" class="btn btn-dark btn-lg toggle"><i class="fa fa-bars"></i></a>
-    <nav id="sidebar-wrapper">
-      <ul class="sidebar-nav">
-        <a id="menu-close" href="#" class="btn btn-light btn-lg pull-right toggle"><i class="fa fa-times"></i></a>
-        <li class="sidebar-brand">
-          <a href="#top" onclick = $("#menu-close").click(); >Start Bootstrap</a>
-        </li>
-        <li>
-          <a href="#top" onclick = $("#menu-close").click(); >Home</a>
-        </li>
-        <li>
-          <a href="#about" onclick = $("#menu-close").click(); >About</a>
-        </li>
-        <li>
-          <a href="#services" onclick = $("#menu-close").click(); >Services</a>
-        </li>
-        <li>
-          <a href="#portfolio" onclick = $("#menu-close").click(); >Portfolio</a>
-        </li>
-        <li>
-          <a href="#contact" onclick = $("#menu-close").click(); >Contact</a>
-        </li>
-      </ul>
-    </nav>
-  </header>
-
-  <div class="quote">
-    <div class="quote-text">
-      <h1>
-        Don't forcus on the pain, Focus on the progress.
-      </h1>
-      <h2>
-        Dwayne Johnson
-      </h2>
+    <div class="navigation">
+      <button class="hamburger" onclick="show()">
+          <div id="bar1" class="bar"></div>
+          <div id="bar2" class="bar"></div>
+          <div id="bar3" class="bar"></div>
+      </button>
+  
+      <nav>
+          <ul>
+              <li><a>Home</a></li>
+              <li><a>Calendar</a></li>
+              <li><a>Goals</a></li>
+              <li><a>Exercise</a></li>
+              <li><a>Meals</a></li>
+          </ul>
+      </nav>
     </div>
+  </header>
+  
+  <div class="quotes">
+    <img src="img/rock1.jpg" alt="Snow" style="width:100%;">
+    <div class="centered">
+      <h1>Don't forcus on the pain, Focus on the progress.</h1>
+      <h2>Dwayne Johnson</h2>
+    </div>
+
   </div>
 
-  <!--scripts-->
-  <script src="js/script.js"></script>
+
+<!--scripts-->
+<script src="js/script.js"></script>
 </body>
 
 <footer>
