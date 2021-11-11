@@ -11,6 +11,7 @@ body {
   font-family: 'Source Sans Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
+/* quotes*/
 .centered {
   position: absolute;
   top: 50%;
@@ -20,6 +21,7 @@ body {
   text-align: center;
 }
 
+/* navigation bar*/
 a,
 button {
   cursor: pointer;
@@ -58,8 +60,8 @@ nav {
 
 .hamburger {
   display: block;
-  top: 5%;
-  right: 95%;
+  top: 4%;
+  right: 96%;
   width: 30px;
   height: 30px;
   transform: translateY(-50%);
