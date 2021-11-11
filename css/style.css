@@ -33,94 +33,115 @@ header {
   vertical-align: middle;
 }
 
-/* nav bar */
+/* Custom Button Styles */
 
-.drawer {
-  display: none;
+.btn-dark {
+  border-radius: 0;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.4);
 }
 
-.drawer__header {
-  padding: 1.5rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border-bottom: 1px solid #ddd;
+.btn-dark:hover,
+.btn-dark:focus,
+.btn-dark:active {
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.7);
 }
 
-.drawer__close {
+.btn-light {
+  border-radius: 0;
+  color: #333;
+  background-color: rgb(255, 255, 255);
+}
+
+.btn-light:hover,
+.btn-light:focus,
+.btn-light:active {
+  color: #333;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+/* Side Menu */
+
+#sidebar-wrapper {
+  z-index: 1000;
+  position: fixed;
+  right: 0;
+  width: 250px;
+  height: 100%;
+  margin-right: -250px;
+  overflow-y: auto;
+  background: #222;
+  -webkit-transition: all 0.4s ease 0s;
+  -moz-transition: all 0.4s ease 0s;
+  -ms-transition: all 0.4s ease 0s;
+  -o-transition: all 0.4s ease 0s;
+  transition: all 0.4s ease 0s;
+}
+
+.sidebar-nav {
+  position: absolute;
+  top: 0;
+  width: 250px;
   margin: 0;
   padding: 0;
-  border: none;
-  background-color: transparent;
-  cursor: pointer;
-  background-image: url("data:image/svg+xml,%0A%3Csvg width='15px' height='16px' viewBox='0 0 15 16' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3Cg id='Page-1' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'%3E%3Cg id='2.-Menu' transform='translate(-15.000000, -13.000000)' stroke='%23000000'%3E%3Cg id='Group' transform='translate(15.000000, 13.521000)'%3E%3Cpath d='M0,0.479000129 L15,14.2971819' id='Path-3'%3E%3C/path%3E%3Cpath d='M0,14.7761821 L15,-1.24344979e-14' id='Path-3'%3E%3C/path%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-  width: 15px;
-  height: 15px;
+  list-style: none;
 }
 
-.drawer__wrapper {
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  height: 100%;
-  width: 100%;
-  max-width: 500px;
-  z-index: 9999;
-  overflow: auto;
-  transition: transform 0.3s;
-  will-change: transform;
-  background-color: #fff;
-  display: flex;
-  flex-direction: column;
-  -webkit-transform: translateX(103%);
-  transform: translateX(103%); /* extra 3% because of box-shadow */
-  -webkit-overflow-scrolling: touch; /* enables momentum scrolling in iOS overflow elements */
-  box-shadow: 0 2px 6px #777;
-}
-.drawer--left .drawer__wrapper {
-  left: 0;
-  right: auto;
-  -webkit-transform: translate3d(-100%, 0, 0);
-  transform: translate3d(-100%, 0, 0);
+.sidebar-nav li {
+  text-indent: 20px;
+  line-height: 40px;
 }
 
-.drawer__content {
-  position: relative;
-  overflow-x: hidden;
-  overflow-y: auto;
-  height: 100%;
-  flex-grow: 1;
-  padding: 1.5rem;
-}
-
-.drawer.is-active {
+.sidebar-nav li a {
   display: block;
+  text-decoration: none;
+  color: #999;
 }
 
-.drawer.is-visible .drawer__wrapper {
-  -webkit-transform: translateX(0);
-  transform: translateX(0);
+.sidebar-nav li a:hover {
+  text-decoration: none;
+  color: #fff;
+  background: rgba(255, 255, 255, 0.2);
 }
 
-.drawer.is-visible .drawer__overlay {
-  opacity: 0.5;
+.sidebar-nav li a:active,
+.sidebar-nav li a:focus {
+  text-decoration: none;
 }
 
-.drawer__overlay {
+.sidebar-nav > .sidebar-brand {
+  height: 55px;
+  font-size: 18px;
+  line-height: 55px;
+}
+
+.sidebar-nav > .sidebar-brand a {
+  color: #999;
+}
+
+.sidebar-nav > .sidebar-brand a:hover {
+  color: #fff;
+  background: none;
+}
+
+#menu-toggle {
+  z-index: 1;
   position: fixed;
   top: 0;
   right: 0;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  z-index: 200;
-  opacity: 0;
-  transition: opacity 0.3s;
-  will-change: opacity;
-  background-color: #000;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
+}
+
+#sidebar-wrapper.active {
+  right: 250px;
+  width: 250px;
+  -webkit-transition: all 0.4s ease 0s;
+  -moz-transition: all 0.4s ease 0s;
+  -ms-transition: all 0.4s ease 0s;
+  -o-transition: all 0.4s ease 0s;
+  transition: all 0.4s ease 0s;
+}
+
+.toggle {
+  margin: 5px 5px 0 0;
 }

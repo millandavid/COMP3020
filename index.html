@@ -7,30 +7,34 @@
   <link rel="icon" href="img/rock.jpg">
 
   <link rel="stylesheet" href="css/style.css">
+  <script src="js/script.js"></script>
 </head>
-
-
-
 
 <body>
   <header>
-    <a href="#" data-drawer-trigger aria-controls="drawer-name" aria-expanded="false">Open Drawer</a>
-
-    <section class="drawer drawer--left" id="drawer-name" data-drawer-target>
-      <div class="drawer__overlay" data-drawer-close tabindex="-1"></div>
-      <div class="drawer__wrapper">
-        <div class="drawer__header">
-          <div class="drawer__title">
-            Drawer Title Here
-          </div>
-          <button class="drawer__close" data-drawer-close aria-label="Close Drawer"></button>
-        </div>
-        <div class="drawer__content">
-          Drawer Content Here
-        </div>
-      </div>
-    </section>
-
+    <a id="menu-toggle" href="#" class="btn btn-dark btn-lg toggle"><i class="fa fa-bars"></i></a>
+    <nav id="sidebar-wrapper">
+      <ul class="sidebar-nav">
+        <a id="menu-close" href="#" class="btn btn-light btn-lg pull-right toggle"><i class="fa fa-times"></i></a>
+        <li class="sidebar-brand">
+          <a href="#top" onclick=$("#menu-close").click();>Start Bootstrap</a>
+        </li>
+        <li>
+          <a href="#top" onclick=$("#menu-close").click();>Home</a>
+        </li>
+        <li>
+          <a href="#about" onclick=$("#menu-close").click();>About</a>
+        </li>
+        <li>
+          <a href="#services" onclick=$("#menu-close").click();>Services</a>
+        </li>
+        <li>
+          <a href="#portfolio" onclick=$("#menu-close").click();>Portfolio</a>
+        </li>
+        <li>
+          <a href="#contact" onclick=$("#menu-close").click();>Contact</a>
+        </li>
+      </ul>
   </header>
   <script src="js/script.js"></script>
   <div class="quote">
@@ -43,6 +47,8 @@
       </h2>
     </div>
   </div>
+
+  <!-- scripts-->
 
 </body>
 
