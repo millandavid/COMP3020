@@ -9,41 +9,30 @@
   <link href="css/style.css" rel="stylesheet" >
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 
 <body>
-  <header>
-    <div class="navigation">
-      <button class="hamburger" onclick="show()">
-          <div id="bar1" class="bar"></div>
-          <div id="bar2" class="bar"></div>
-          <div id="bar3" class="bar"></div>
-      </button>
-  
-      <nav>
-          <ul>
-              <li><a>Home</a></li>
-              <li><a>Calendar</a></li>
-              <li><a>Goals</a></li>
-              <li><a>Exercise</a></li>
-              <li><a>Meals</a></li>
-          </ul>
-      </nav>
-    </div>
-  </header>
-  
+
+  <div id="navbar"></div>
+
   <div class="quotes">
     <img src="img/rock1.jpg" alt="rock" style="width:100%;">
     <div class="centered">
       <h1>Don't forcus on the pain, Focus on the progress.</h1>
       <h2>Dwayne Johnson</h2>
     </div>
-
   </div>
 
 
 <!--scripts-->
 <script src="js/script.js"></script>
+<script>
+  $(function(){
+    $("#navbar").load("nav.html");
+  });
+</script>
 </body>
 
 <footer>
