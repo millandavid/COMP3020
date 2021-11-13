@@ -10,52 +10,55 @@
     <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
   
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://kit.fontawesome.com/40aa03dbdb.js" crossorigin="anonymous"></script>
   </head>
   <body>
     <div id="navbar"></div>
 
     <div id="calBody">
       <div id="container">
-        <div id="header">
-          <div id="monthDisplay"></div>
-          <div id="calButton">
-            <button id="backButton">Back</button>
-            <button id="nextButton">Next</button>
-          </div>
-        </div>
-  
-        <div id="weekdays">
-          <div>Sunday</div>
-          <div>Monday</div>
-          <div>Tuesday</div>
-          <div>Wednesday</div>
-          <div>Thursday</div>
-          <div>Friday</div>
-          <div>Saturday</div>
-        </div>
-  
-        <div id="calendar"></div>
+      <div id="header">
+        <div id="monthDisplay"></div>
       </div>
-  
-      <div id="newEventModal">
-        <h2>New Event</h2>
-  
-        <input id="eventTitleInput" placeholder="Event Title" />
-  
-        <button id="saveButton">Save</button>
-        <button id="cancelButton">Cancel</button>
+      
+      <div id="calButton">
+        <button id="backButton"><i class="fas fa-chevron-left"></i></button>
+        <button id="nextButton"><i class="fas fa-chevron-right"></i></button>
       </div>
-  
-      <div id="deleteEventModal">
-        <h2>Event</h2>
-  
-        <p id="eventText"></p>
-  
-        <button id="deleteButton">Delete</button>
-        <button id="closeButton">Close</button>
+
+      
+      <div id="weekdays">
+        <div>Sunday</div>
+        <div>Monday</div>
+        <div>Tuesday</div>
+        <div>Wednesday</div>
+        <div>Thursday</div>
+        <div>Friday</div>
+        <div>Saturday</div>
       </div>
-  
-      <div id="modalBackDrop"></div>
+
+      <div id="calendar"></div>
+    </div>
+
+    <div id="newEventModal">
+      <h2>New Event</h2>
+
+      <input id="eventTitleInput" placeholder="Event Title" />
+
+      <button id="saveButton">Save</button>
+      <button id="cancelButton">Cancel</button>
+    </div>
+
+    <div id="deleteEventModal">
+      <h2>Event</h2>
+
+      <p id="eventText"></p>
+
+      <button id="deleteButton">Delete</button>
+      <button id="closeButton">Close</button>
+    </div>
+
+    <div id="modalBackDrop"></div>
     </div>
 
 

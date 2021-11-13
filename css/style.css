@@ -120,6 +120,11 @@ nav {
   padding: 5px;
   border-radius: 5px;
   color: white;
+  background-color: black;
+}
+
+#nextButton {
+  margin-left: 615px;
 }
 
 #header {
@@ -129,7 +134,7 @@ nav {
   font-size: 26px;
   font-family: sans-serif;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
 }
 #header button {
   background-color: black;
@@ -146,6 +151,7 @@ nav {
 #weekdays div {
   width: 100px;
   padding: 10px;
+  text-align: center;
 }
 #calendar {
   width: 100%;
@@ -167,12 +173,14 @@ nav {
   justify-content: space-between;
 }
 .day:hover {
-  background-color: #e8faed;
+  background-color: grey;
 }
 
 .day + #currentDay {
   background-color: #e8f4fa;
 }
+
+/* event pop up for calendar*/
 .event {
   font-size: 10px;
   padding: 3px;
