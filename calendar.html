@@ -13,7 +13,25 @@
     <script src="https://kit.fontawesome.com/40aa03dbdb.js" crossorigin="anonymous"></script>
   </head>
   <body>
-    <div id="navbar"></div>
+    <header>
+      <div class="navigation">
+        <button class="hamburger" onclick="show()">
+            <div id="bar1" class="bar"></div>
+            <div id="bar2" class="bar"></div>
+            <div id="bar3" class="bar"></div>
+        </button>
+    
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="calendar.html">Calendar</a></li>
+                <li><a href="goals.html">Goals</a></li>
+                <li><a href="">Exercise</a></li>
+                <li><a href="">Meals</a></li>
+            </ul>
+        </nav>
+      </div>
+    </header>
 
     <div id="calBody">
       <div id="container">
@@ -63,11 +81,7 @@
 
     <!--scripts-->
     <script src="js/script.js"></script>
-    <script>
-      $(function(){
-        $("#navbar").load("nav.html");
-      });
-    </script>
+
   </body>
 </html>
 
