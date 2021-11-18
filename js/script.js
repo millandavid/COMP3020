@@ -1,8 +1,12 @@
+
+// nav bar
 function show() {
   document.querySelector('.hamburger').classList.toggle('open');
   document.querySelector('.navigation').classList.toggle('active');
 }
 
+
+// calendar and modal
 let nav = 0;
 let clicked = null;
 let events = localStorage.getItem('events')

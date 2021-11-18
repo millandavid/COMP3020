@@ -18,6 +18,8 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
+  color: white;
+  text-shadow: 0 0 2px black, 0 0 2px black, 0 0 2px black, 0 0 2px black;
 }
 
 /* navigation bar*/
@@ -235,4 +237,20 @@ nav {
   height: 100vh;
   position: absolute;
   background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* graph */
+.graph{
+  margin: 50px;
+}
+
+.graph h1{
+  text-align: center;
+  font-size: 46px;
+}
+
+#canvas{
+  width: 100%;
+  margin: 0 auto;
+
 }
