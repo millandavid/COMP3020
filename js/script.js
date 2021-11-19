@@ -43,7 +43,7 @@ function load() {
   const day = dt.getDate();
   const month = dt.getMonth();
   const year = dt.getFullYear();
-
+  
   const firstDayOfMonth = new Date(year, month, 1);
   const daysInMonth = new Date(year, month + 1, 0).getDate();
 
@@ -56,7 +56,7 @@ function load() {
   const paddingDays = weekdays.indexOf(dateString.split(', ')[0]);
 
   document.getElementById('monthDisplay').innerText = `${dt.toLocaleDateString('en-us',{ month: 'long' },)} ${year}`;
-  //document.getElementById('dayDisplay').innerText = `${dt.toLocaleDateString('en-us',{ month: 'long' },)} ${year}`;
+  
   
   calendar.innerHTML = '';
 
@@ -64,22 +64,23 @@ function load() {
     const daySquare = document.createElement('div');
     daySquare.classList.add('day');
 
-    const dayString = `${month + 1}/${i - paddingDays}/${year}`;
+    dayString = `${month + 1}/${i - paddingDays}/${year}`;
 
     if (i > paddingDays) {
       daySquare.innerText = i - paddingDays;
       const eventForDay = events.find((e) => e.date === dayString);
 
       if (i - paddingDays === day && nav === 0) {
-        daySquare.id = 'currentDay';
+        daySquare.id = 'currentDay';  
       }
-
+      daySquare.addEventListener('click', () => document.getElementById('dayDisplay').innerText = `${dt.toLocaleDateString('en-us',{ month: 'long' },)} ${daySquare.innerText}`);
       daySquare.addEventListener('click', () => openModal(dayString));
+      
     } 
     else {
       daySquare.classList.add('padding');
     }
-
+   
     calendar.appendChild(daySquare);
   }
 }

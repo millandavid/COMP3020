@@ -182,29 +182,27 @@ nav {
   background-color: #e8f4fa;
 }
 
-/* event pop up for calendar*/
-.event {
-  font-size: 10px;
-  padding: 3px;
-  background-color: #58bae4;
-  color: white;
-  border-radius: 5px;
-  max-height: 55px;
-  overflow: hidden;
-}
+/* pop up for calendar*/
+
 .padding {
   cursor: default !important;
   background-color: #fffcff !important;
   box-shadow: none !important;
 }
 
-#date{
+#dayDisplay{
   text-align: center;
-  font-size: 30px;
+  font-size: 42px;
 }
 
 #newEventModal h1,li{
-  text-align: center;
+  color: black;
+  text-align: left;
+  text-transform: uppercase;
+  list-style-type: none;
+  font-size: 1.5em;
+  padding: 20px 10px;
+  border-bottom: 1pt solid #252525;
 }
 
 #newEventModal{
@@ -212,7 +210,7 @@ nav {
   list-style-type: none;
   z-index: 20;
   padding: 25px;
-  background-color: #e8f4fa;
+  background-color: white;
   box-shadow: 0px 0px 3px black;
   border-radius: 5px;
   width: 350px;
@@ -223,6 +221,13 @@ nav {
 }
 
 #closeButton{
+  width: 30px;
+  cursor: pointer;
+  box-shadow: 0px 0px 2px gray;
+  border: none;
+  outline: none;
+  padding: 5px;
+  border-radius: 5px;
   color: white;
   background-color: black;
   margin-left: 330px;
